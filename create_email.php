@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Email Integration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -23,11 +23,10 @@
     </div>
     <div class="form-group">
       <label for="comment">Write Your Message:</label>
-      <textarea class="form-control" rows="5" id="comment" name="msg"></textarea>
+      <textarea class="form-control" rows="10" id="comment" name="msg"></textarea>
     </div>
-    <button type="submit" class="btn btn-default">Send</button>
+    <button type="submit" class="btn btn-success">Send</button>
   </form>
 </div>
-
 </body>
 </html>
