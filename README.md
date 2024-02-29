@@ -69,7 +69,7 @@ function smtp_mailer($to,$subject, $msg){
 }
 ?>
 ```
-If you are re-using the instance (e.g. when sending to a mailing list), you may need to clear the recipient list to avoid sending duplicate messages. See [the mailing list example](https://github.com/PHPMailer/PHPMailer/blob/master/examples/mailing_list.phps) for further guidance.
+If you are re-using the instance (e.g. when sending to a mailing list), you may need to clear the recipient list to avoid sending duplicate messages. See the mailing list example for further guidance.
 
 That's it. You should now be ready to use PHPMailer!
 
@@ -90,7 +90,7 @@ Clone the project
 ## 🔗 aBOUT mE
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sites.google.com/view/minhajuddinhassan/home)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/minhaj-uddin-hassan-78245122a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
+##Thank You❤️❤️
 
 
