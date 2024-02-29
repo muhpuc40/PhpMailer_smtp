@@ -26,7 +26,7 @@ Formatting email correctly is surprisingly difficult. There are myriad overlappi
 The PHP `mail()` function usually sends via a local mail server, typically fronted by a `sendmail` binary on Linux, BSD, and macOS platforms, however, Windows usually doesn't include a local mail server; PHPMailer's integrated SMTP client allows email sending on all platforms without needing a local mail server. Be aware though, that the `mail()` function should be avoided when possible; it's both faster and [safer](https://exploitbox.io/paper/Pwning-PHP-Mail-Function-For-Fun-And-RCE.html) to use SMTP to localhost.
 
 ## Legacy versions
-PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported, even for security updates. You will find the latest version of 5.2 in the [5.2-stable branch](https://github.com/PHPMailer/PHPMailer/tree/5.2-stable). If you're using PHP 5.5 or later (which you should be), switch to the 6.x releases.
+PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported, even for security updates. You will find the latest version of 5.2 in the [5.2-stable branch]. If you're using PHP 5.5 or later (which you should be), switch to the 6.x releases.
 
 
 ## A Simple Example
@@ -69,14 +69,12 @@ function smtp_mailer($to,$subject, $msg){
 }
 ?>
 ```
-## Get-app-password-link: https://myaccount.google.com/apppasswords
-
 You'll find plenty to play with in the [examples](https://github.com/PHPMailer/PHPMailer/tree/master/examples) folder, which covers many common scenarios including sending through Gmail, building contact forms, sending to mailing lists, and more.
 
 If you are re-using the instance (e.g. when sending to a mailing list), you may need to clear the recipient list to avoid sending duplicate messages. See [the mailing list example](https://github.com/PHPMailer/PHPMailer/blob/master/examples/mailing_list.phps) for further guidance.
 
 That's it. You should now be ready to use PHPMailer!
-
+## Get-app-password-link: https://myaccount.google.com/apppasswords## Get-app-password-link: https://myaccount.google.com/apppasswords
 
 ## Screenshots
 
