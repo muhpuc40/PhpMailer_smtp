@@ -5,7 +5,7 @@
 [![License](https://poser.pugx.org/phpmailer/phpmailer/license.svg)](https://packagist.org/packages/phpmailer/phpmailer)
 [![API Docs](https://github.com/phpmailer/phpmailer/workflows/Docs/badge.svg)](https://phpmailer.github.io/PHPMailer/)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PHPMailer/PHPMailer/badge)](https://api.securityscorecards.dev/projects/github.com/PHPMailer/PHPMailer)
-## Features
+## 👌Features
 - Probably the world's most popular code for sending email from PHP!
 - Used by many open-source projects: WordPress, Drupal, 1CRM, SugarCRM, Yii, Joomla! and many more
 - Integrated SMTP support – send without a local mail server
@@ -18,18 +18,18 @@
 - Compatible with PHP 5.5 and later, including PHP 8.2
 - Much more!
 
-## Why you might need it
+## 🏷️Why you might need it
 Many PHP developers need to send email from their code. The only PHP function that supports this directly is [`mail()`](https://www.php.net/manual/en/function.mail.php). However, it does not provide any assistance for making use of popular features such as encryption, authentication, HTML messages, and attachments.
 
 Formatting email correctly is surprisingly difficult. There are myriad overlapping (and conflicting) standards, requiring tight adherence to horribly complicated formatting and encoding rules – the vast majority of code that you'll find online that uses the `mail()` function directly is just plain wrong, if not unsafe!
 
 The PHP `mail()` function usually sends via a local mail server, typically fronted by a `sendmail` binary on Linux, BSD, and macOS platforms, however, Windows usually doesn't include a local mail server; PHPMailer's integrated SMTP client allows email sending on all platforms without needing a local mail server. Be aware though, that the `mail()` function should be avoided when possible; it's both faster and [safer](https://exploitbox.io/paper/Pwning-PHP-Mail-Function-For-Fun-And-RCE.html) to use SMTP to localhost.
 
-## Legacy versions
+## 🛡️Legacy versions
 PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported, even for security updates. You will find the latest version of 5.2 in the [5.2-stable branch]. If you're using PHP 5.5 or later (which you should be), switch to the 6.x releases.
 
 
-## A Simple Example
+## 🖥️A Simple Example
 
 ```php
 <?php
@@ -73,7 +73,7 @@ If you are re-using the instance (e.g. when sending to a mailing list), you may 
 
 That's it. You should now be ready to use PHPMailer!
 
-## Get App Password Link
+## 🔐Get App Password Link
  	https://myaccount.google.com/apppasswords
 
 ## Screenshots
@@ -81,7 +81,7 @@ That's it. You should now be ready to use PHPMailer!
      <img src="SS.png" alt="alt-text" style="width:100">
 </div>
 
-## Run Locally
+## 🖱️Run Locally
 Clone the project
 ```bash
   git clone https://github.com/muhpuc40/PhpMailer_smtp
@@ -91,4 +91,4 @@ Clone the project
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sites.google.com/view/minhajuddinhassan/home)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/minhaj-uddin-hassan-78245122a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
-# Thanks By Minhaj❤️❤️
+# ❤️❤️Thanks By Minhaj❤️❤️
