@@ -50,9 +50,9 @@ function smtp_mailer($to,$subject, $msg){
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8';
 	//$mail->SMTPDebug = 2; 
-	$mail->Username = "mdhassan49.muh@gmail.com";
-	$mail->Password = "bogp uzhz ndvi ndch";  //use google app password
-	$mail->SetFrom("mdhassan49.muh@gmail.com");
+	$mail->Username = "mdhassan49.muh@gmail.com"; //your Email
+	$mail->Password = " ";  //use google app password
+	$mail->SetFrom("mdhassan49.muh@gmail.com"); 
 	$mail->Subject = $subject;
 	$mail->Body =$msg;
 	$mail->AddAddress($to);
@@ -68,8 +68,8 @@ function smtp_mailer($to,$subject, $msg){
 	}
 }
 ?>
-
 ```
+## Get-app-password-link: https://myaccount.google.com/apppasswords
 
 You'll find plenty to play with in the [examples](https://github.com/PHPMailer/PHPMailer/tree/master/examples) folder, which covers many common scenarios including sending through Gmail, building contact forms, sending to mailing lists, and more.
 
