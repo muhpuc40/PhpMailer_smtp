@@ -74,7 +74,7 @@ If you are re-using the instance (e.g. when sending to a mailing list), you may 
 That's it. You should now be ready to use PHPMailer!
 
 ## Get App Password Link
- 	: [Link](https://myaccount.google.com/apppasswords)
+ 	https://myaccount.google.com/apppasswords
 
 ## Screenshots
 <div style="position: relative;">
