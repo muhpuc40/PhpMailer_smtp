@@ -1,4 +1,3 @@
-
 # PHPMailer – A full-featured email creation and transfer class for PHP
 [![Test status](https://github.com/PHPMailer/PHPMailer/workflows/Tests/badge.svg)](https://github.com/PHPMailer/PHPMailer/actions)
 [![codecov.io](https://codecov.io/gh/PHPMailer/PHPMailer/branch/master/graph/badge.svg?token=iORZpwmYmM)](https://codecov.io/gh/PHPMailer/PHPMailer)
@@ -26,12 +25,6 @@ Formatting email correctly is surprisingly difficult. There are myriad overlappi
 
 The PHP `mail()` function usually sends via a local mail server, typically fronted by a `sendmail` binary on Linux, BSD, and macOS platforms, however, Windows usually doesn't include a local mail server; PHPMailer's integrated SMTP client allows email sending on all platforms without needing a local mail server. Be aware though, that the `mail()` function should be avoided when possible; it's both faster and [safer](https://exploitbox.io/paper/Pwning-PHP-Mail-Function-For-Fun-And-RCE.html) to use SMTP to localhost.
 
-*Please* don't be tempted to do it yourself – if you don't use PHPMailer, there are many other excellent libraries that
-you should look at before rolling your own. Try [SwiftMailer](https://swiftmailer.symfony.com/)
-, [Laminas/Mail](https://docs.laminas.dev/laminas-mail/), [ZetaComponents](https://github.com/zetacomponents/Mail), etc.
-
-
-
 ## Legacy versions
 PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported, even for security updates. You will find the latest version of 5.2 in the [5.2-stable branch](https://github.com/PHPMailer/PHPMailer/tree/5.2-stable). If you're using PHP 5.5 or later (which you should be), switch to the 6.x releases.
 
@@ -40,52 +33,42 @@ PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported,
 
 ```php
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+include('smtp/PHPMailerAutoload.php');
 
-//Load Composer's autoloader
-require 'vendor/autoload.php';
+$email = $_POST['email'];
+$sub = $_POST['sub'];
+$body = $_POST['msg'];
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'user@example.com';                     //SMTP username
-    $mail->Password   = 'secret';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
-
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+echo smtp_mailer($email, $sub, $body);
+function smtp_mailer($to,$subject, $msg){
+	$mail = new PHPMailer(); 
+	$mail->IsSMTP(); 
+	$mail->SMTPAuth = true; 
+	$mail->SMTPSecure = 'tls'; 
+	$mail->Host = "smtp.gmail.com";
+	$mail->Port = 587; 
+	$mail->IsHTML(true);
+	$mail->CharSet = 'UTF-8';
+	//$mail->SMTPDebug = 2; 
+	$mail->Username = "mdhassan49.muh@gmail.com";
+	$mail->Password = "bogp uzhz ndvi ndch";  //use google app password
+	$mail->SetFrom("mdhassan49.muh@gmail.com");
+	$mail->Subject = $subject;
+	$mail->Body =$msg;
+	$mail->AddAddress($to);
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+	if(!$mail->Send()){
+		echo $mail->ErrorInfo;
+	}else{
+		return 'Sent';
+	}
 }
+?>
+
 ```
 
 You'll find plenty to play with in the [examples](https://github.com/PHPMailer/PHPMailer/tree/master/examples) folder, which covers many common scenarios including sending through Gmail, building contact forms, sending to mailing lists, and more.
@@ -114,16 +97,6 @@ Complete generated API documentation is [available online](https://phpmailer.git
 You can generate complete API-level documentation by running `phpdoc` in the top-level folder, and documentation will appear in the `docs` folder, though you'll need to have [PHPDocumentor](http://www.phpdoc.org) installed. You may find [the unit tests](https://github.com/PHPMailer/PHPMailer/blob/master/test/PHPMailerTest.php) a good reference for how to do various operations such as encryption.
 
 If the documentation doesn't cover what you need, search the [many questions on Stack Overflow](http://stackoverflow.com/questions/tagged/phpmailer), and before you ask a question about "SMTP Error: Could not connect to SMTP host.", [read the troubleshooting guide](https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting).
-
-## Tests
-[PHPMailer tests](https://github.com/PHPMailer/PHPMailer/tree/master/test/) use PHPUnit 9, with [a polyfill](https://github.com/Yoast/PHPUnit-Polyfills) to let 9-style tests run on older PHPUnit and PHP versions.
-
-[![Test status](https://github.com/PHPMailer/PHPMailer/workflows/Tests/badge.svg)](https://github.com/PHPMailer/PHPMailer/actions)
-
-If this isn't passing, is there something you can do to help?
-
-
-
 
 ## Run Locally
 
