@@ -29,7 +29,7 @@ The PHP `mail()` function usually sends via a local mail server, typically front
 PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported, even for security updates. You will find the latest version of 5.2 in the [5.2-stable branch]. If you're using PHP 5.5 or later (which you should be), switch to the 6.x releases.
 
 
-## 🖥️A Simple Example
+## 🤖A Simple Example
 
 ```php
 <?php
@@ -76,7 +76,7 @@ That's it. You should now be ready to use PHPMailer!
 ## 🔐Get App Password Link
  	https://myaccount.google.com/apppasswords
 
-## Screenshots
+## 🖥️Screenshots
 <div style="position: relative;">
      <img src="SS.png" alt="alt-text" style="width:100">
 </div>
@@ -91,4 +91,4 @@ Clone the project
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sites.google.com/view/minhajuddinhassan/home)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/minhaj-uddin-hassan-78245122a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
-# ❤️❤️Thanks By Minhaj❤️❤️
+# ❤️❤️❤️❤️Thanks By Minhaj❤️❤️❤️❤️
