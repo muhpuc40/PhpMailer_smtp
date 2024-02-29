@@ -69,21 +69,16 @@ function smtp_mailer($to,$subject, $msg){
 }
 ?>
 ```
-You'll find plenty to play with in the [examples](https://github.com/PHPMailer/PHPMailer/tree/master/examples) folder, which covers many common scenarios including sending through Gmail, building contact forms, sending to mailing lists, and more.
-
 If you are re-using the instance (e.g. when sending to a mailing list), you may need to clear the recipient list to avoid sending duplicate messages. See [the mailing list example](https://github.com/PHPMailer/PHPMailer/blob/master/examples/mailing_list.phps) for further guidance.
 
 That's it. You should now be ready to use PHPMailer!
-## Get-app-password-link
+
+## Get App Password Link
  	[https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
 
-
-
 ## Screenshots
-
-
 <div style="position: relative;">
-     <img src="SS.png" alt="alt-text" style="width:100%">
+     <img src="SS.png" alt="alt-text" style="width:100">
 </div>
 
 ## Run Locally
@@ -92,7 +87,10 @@ Clone the project
   git clone https://github.com/muhpuc40/PhpMailer_smtp
 ```
 
-
+## 🔗 aBOUT mE
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
 
 
