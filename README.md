@@ -74,7 +74,9 @@ You'll find plenty to play with in the [examples](https://github.com/PHPMailer/P
 If you are re-using the instance (e.g. when sending to a mailing list), you may need to clear the recipient list to avoid sending duplicate messages. See [the mailing list example](https://github.com/PHPMailer/PHPMailer/blob/master/examples/mailing_list.phps) for further guidance.
 
 That's it. You should now be ready to use PHPMailer!
-## Get-app-password-link: https://myaccount.google.com/apppasswords## Get-app-password-link: https://myaccount.google.com/apppasswords
+## Get-app-password-link
+	https://myaccount.google.com/apppasswords
+
 
 ## Screenshots
 
@@ -97,28 +99,11 @@ You can generate complete API-level documentation by running `phpdoc` in the top
 If the documentation doesn't cover what you need, search the [many questions on Stack Overflow](http://stackoverflow.com/questions/tagged/phpmailer), and before you ask a question about "SMTP Error: Could not connect to SMTP host.", [read the troubleshooting guide](https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting).
 
 ## Run Locally
-
 Clone the project
-
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/muhpuc40/PhpMailer_smtp
 ```
 
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
   npm run start
 ```
 
